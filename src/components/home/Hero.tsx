@@ -1,4 +1,3 @@
-import { Button } from '../common/Button';
 import { personalInfo } from '../../data/personalInfo';
 
 /**
@@ -9,8 +8,8 @@ import { personalInfo } from '../../data/personalInfo';
 
 export function Hero() {
   return (
-    <div className="min-h-[80vh] flex items-center">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16 md:py-24 w-full">
+    <div className="min-h-[70vh] flex items-center">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-12 md:py-16 w-full">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left side - Text content */}
           <div className="order-2 lg:order-1">
@@ -60,41 +59,12 @@ export function Hero() {
                 text-ink-600 dark:text-ink-400
                 max-w-xl
                 leading-relaxed
-                mb-10
                 opacity-0 animate-slide-up animation-delay-300
               "
             >
               I build things for the web and beyond. Passionate about creating
               elegant solutions to complex problems.
             </p>
-
-            {/* CTA Buttons */}
-            <div
-              className="
-                flex flex-wrap gap-4
-                opacity-0 animate-slide-up animation-delay-400
-              "
-            >
-              <Button to="/projects" variant="primary">
-                View Projects
-                <svg
-                  className="w-4 h-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17 8l4 4m0 0l-4 4m4-4H3"
-                  />
-                </svg>
-              </Button>
-              <Button to="/contact" variant="secondary">
-                Contact Me
-              </Button>
-            </div>
           </div>
 
           {/* Right side - Image */}
@@ -118,7 +88,7 @@ export function Hero() {
               <div
                 className="
                   relative
-                  w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96
+                  w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]
                   rounded-2xl
                   overflow-hidden
                   border-2 border-ink-100 dark:border-ink-700
