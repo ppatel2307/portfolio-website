@@ -65,14 +65,21 @@ function StoryText({ children }: { children: React.ReactNode }) {
 export function MyStory() {
   // Image sources - update these paths when you add your images
   const images = {
-    birth: '', // Add path like '/images/story/birth.jpg'
-    childhood: '', // Add path like '/images/story/childhood.jpg'
-    woodworking1: '', // '/images/story/woodworking1.jpg'
-    woodworking2: '', // '/images/story/woodworking2.jpg'
-    woodworking3: '', // '/images/story/woodworking3.jpg'
-    sports1: '', // '/images/story/sports1.jpg'
-    sports2: '', // '/images/story/sports2.jpg'
-    sports3: '', // '/images/story/sports3.jpg'
+    birth: '/images/baby.jpeg', // Add path like '/images/story/birth.jpg'
+    childhood: '/images/graduation.jpeg', // Add path like '/images/story/childhood.jpg'
+    woodworking1: '/images/cuttingboard.jpeg', // '/images/story/woodworking1.jpg'
+    woodworking2: '/images/ring.jpeg', // '/images/story/woodworking2.jpg'
+    woodworking3: '/images/garden.jpeg', // '/images/story/woodworking3.jpg'
+    sports1: '/images/football.jpeg',
+    sports2: '/images/lacrosse.jpeg',
+    sports3: '/images/karate.jpeg',
+    family1: '/images/fam.jpeg',
+    family2: '/images/family.jpeg',
+    hobby1: '/images/snowboard.jpeg',
+    hobby2: '/images/mountainbiking.jpeg',
+    hobby3: '/images/backpacking.jpeg',
+    hobby4: '/images/motorcycle.jpeg',
+    hobby5: '/images/travel.jpeg',
   };
 
   return (
@@ -155,7 +162,7 @@ export function MyStory() {
       {/* Sports */}
       <StorySection>
         <StoryText>
-          Sports shaped another part of me. Playing lacrosse and football taught me <span className="font-semibold text-accent dark:text-accent-light">discipline</span>, <span className="font-semibold text-accent dark:text-accent-light">teamwork</span>, 
+          Sports shaped another part of me. Playing lacrosse, football, and mixed martial arts taught me <span className="font-semibold text-accent dark:text-accent-light">discipline</span>, <span className="font-semibold text-accent dark:text-accent-light">teamwork</span>, 
           and how to push myself beyond my comfort zone. I learned how to communicate under pressure, 
           trust my teammates, and hold myself accountable—skills that translate directly into 
           collaborative engineering work.
@@ -192,6 +199,21 @@ export function MyStory() {
           of people—someone who listens first, collaborates naturally, and strengthens a team both 
           professionally and personally.
         </StoryText>
+        
+        <div className="grid grid-cols-2 gap-4 mt-6">
+          <ImagePlaceholder 
+            id="9" 
+            src={images.family1} 
+            alt="Family 1"
+            className="w-full aspect-[4/3]"
+          />
+          <ImagePlaceholder 
+            id="10" 
+            src={images.family2} 
+            alt="Family 2"
+            className="w-full aspect-[4/3]"
+          />
+        </div>
       </StorySection>
 
       {/* Hobbies */}
@@ -203,6 +225,39 @@ export function MyStory() {
           backgrounds. Whether I'm on a construction site, in a research lab, or working with 
           developers, I can find common ground with almost anyone.
         </StoryText>
+        
+        <div className="grid grid-cols-5 gap-4 mt-6">
+          <ImagePlaceholder 
+            id="11" 
+            src={images.hobby1} 
+            alt="Snowboarding"
+            className="w-full aspect-[3/4]"
+          />
+          <ImagePlaceholder 
+            id="12" 
+            src={images.hobby2} 
+            alt="Mountain Biking"
+            className="w-full aspect-[3/4]"
+          />
+          <ImagePlaceholder 
+            id="13" 
+            src={images.hobby3} 
+            alt="Backpacking"
+            className="w-full aspect-[3/4]"
+          />
+          <ImagePlaceholder 
+            id="14" 
+            src={images.hobby4} 
+            alt="Motorcycle"
+            className="w-full aspect-[3/4]"
+          />
+          <ImagePlaceholder 
+            id="15" 
+            src={images.hobby5} 
+            alt="Travel"
+            className="w-full aspect-[3/4]"
+          />
+        </div>
       </StorySection>
 
       {/* Conclusion */}
