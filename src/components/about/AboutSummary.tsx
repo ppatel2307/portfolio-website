@@ -2,30 +2,31 @@ import { personalInfo } from '../../data/personalInfo';
 
 /**
  * AboutSummary component.
- * Displays the user's bio and location info.
+ * Displays the user's photo with My Story intro.
  * Data sourced from personalInfo.ts.
  */
 
 export function AboutSummary() {
   return (
-    <div className="grid md:grid-cols-3 gap-8 md:gap-12">
-      {/* Avatar placeholder */}
-      <div className="md:col-span-1 flex justify-center md:justify-start">
+    <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+      {/* Avatar */}
+      <div className="flex justify-center md:justify-start">
         <div
           className="
-            w-48 h-48 md:w-full md:h-auto md:aspect-square
+            w-72 h-72 md:w-full md:max-w-md md:h-auto md:aspect-square
             rounded-2xl
             bg-gradient-to-br from-accent/20 to-accent/5
             dark:from-accent/30 dark:to-accent/10
             flex items-center justify-center
             border-2 border-accent/20
+            overflow-hidden
           "
         >
           {personalInfo.avatarUrl ? (
             <img
               src={personalInfo.avatarUrl}
               alt={personalInfo.name}
-              className="w-full h-full object-cover rounded-2xl"
+              className="w-full h-full object-cover"
             />
           ) : (
             <span className="font-display text-6xl text-accent/40">
@@ -35,32 +36,42 @@ export function AboutSummary() {
         </div>
       </div>
 
-      {/* Bio content */}
-      <div className="md:col-span-2">
+      {/* Story intro content */}
+      <div>
         <h3
           className="
-            font-display text-2xl font-bold
+            font-display text-3xl md:text-4xl font-bold
             text-ink-800 dark:text-cream-50
-            mb-4
+            mb-3
           "
         >
-          A bit about me
+          My Story
         </h3>
         
-        <div
+        <p
           className="
-            text-ink-600 dark:text-ink-300
-            leading-relaxed
-            space-y-4
+            text-ink-500 dark:text-ink-400
+            mb-6
+            text-lg
           "
         >
-          {personalInfo.shortBio.split('\n').map((paragraph, index) => (
-            <p key={index}>{paragraph.trim()}</p>
-          ))}
-        </div>
+          The experiences that shaped who I am today.
+        </p>
+
+        <p
+          className="
+            text-xl md:text-2xl
+            text-ink-700 dark:text-ink-200
+            leading-relaxed
+            font-medium
+          "
+        >
+          You want someone who can think, build, collaborate, and add to the culture. 
+          So here's my story, told the way I lived it, and the traits it built along the way.
+        </p>
 
         {/* Location badge */}
-        <div className="mt-6 flex items-center gap-2 text-ink-500 dark:text-ink-400">
+        <div className="mt-8 flex items-center gap-2 text-ink-500 dark:text-ink-400">
           <svg
             className="w-5 h-5"
             fill="none"
@@ -85,4 +96,3 @@ export function AboutSummary() {
     </div>
   );
 }
-

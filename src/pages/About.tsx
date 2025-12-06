@@ -1,33 +1,24 @@
 import { SectionWrapper } from '../components/common/SectionWrapper';
-import { SectionHeader } from '../components/common/SectionHeader';
 import { AboutSummary } from '../components/about/AboutSummary';
-import { SkillsGrid } from '../components/about/SkillsGrid';
+import { MyStory } from '../components/about/MyStory';
 
 /**
  * About page component.
- * Displays personal bio and skills.
+ * Displays personal bio and story.
  * Data sourced from personalInfo.ts.
  */
 
 export function About() {
   return (
     <>
-      {/* Bio Section */}
+      {/* Bio & Story Intro Section */}
       <SectionWrapper>
-        <SectionHeader
-          title="About Me"
-          subtitle="Get to know a little more about who I am and what I do."
-        />
         <AboutSummary />
       </SectionWrapper>
 
-      {/* Skills Section */}
+      {/* My Story Details Section */}
       <SectionWrapper variant="alternate">
-        <SectionHeader
-          title="Skills & Technologies"
-          subtitle="The tools and technologies I work with on a regular basis."
-        />
-        <SkillsGrid />
+        <MyStory />
       </SectionWrapper>
     </>
   );
